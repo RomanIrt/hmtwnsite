@@ -8,12 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roman Homepage</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="background">
         <header>
-            <h1>Welcome to the </h1>
+            <h1>Welcome to the</h1>
             <h2>City of Preston</h2>
             <p>The best place on Earth!</p>
         </header>
@@ -30,13 +29,41 @@
         <main>
             <section class="welcome-section">
                 <h2>Discover Our Town</h2>
-                <p>Here you'll find many interesting places worth visiting! </p>
-                <button onclick="window.location.href='#contact-form';">Contact Us</button>
+                <p>Here you'll find many interesting places worth visiting!</p>
+            </section>
+
+            <section class="gallery">
+                <h2>Explore Preston!</h2>
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <img src="https://bidpreston.co.uk/wp-content/uploads/2019/05/MM-Pete-Riley.jpg" alt="Preston Flag Market">
+                        <p>Preston Flag Market</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="https://prestonhistory.files.wordpress.com/2020/11/derby-statue.jpg" alt="Preston Park">
+                        <p>Beautiful Preston Avenham Park</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="https://catholic-herald.b-cdn.net/wp-content/uploads/2021/07/St_Wilfrids_RC_Church-scaled.jpg" alt="Preston Cathedral">
+                        <p>Historic Preston Cathedral</p>
+                    </div>
+                    <div class="description">
+                        <h3>About Preston</h3>
+                        <p>Preston (/ˈprɛstən/) is a city on the north bank of the River Ribble in Lancashire, England. The city is the administrative centre of the county of Lancashire and the wider City of Preston local government district. Preston and its surrounding district obtained city status in 2002, becoming England's 50th city in the 50th year of Queen Elizabeth II's reign. Preston has a population of 114,300, the City of Preston district 132,000 and the Preston Built-up Area 313,322. The Preston Travel To Work Area, in 2011, had a population of 420,661, compared with 354,000 in the previous census. The south bank of the Ribble is part of the Preston urban area, although it forms the South Ribble borough that is administratively separate.</p>
+                    </div>                    
+                </div>
+            </section>
+
+            <section class="video-section">
+                <h2>Explore more!</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/SE6-ZBgejyQ" frameborder="0" allowfullscreen></iframe>
+                </div>
             </section>
         </main>
 
         <section id="contact-form">
-            <h2>Book now!</h2>
+            <h2>And Book Your Tour NOW!</h2>
             <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -55,5 +82,20 @@
             <p>&copy; 2024 Roman's Hometown. All rights reserved.</p>
         </footer>
     </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const description = document.querySelector('.description');
+            const scrollPosition = window.scrollY || window.pageYOffset;
+            const documentHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+    
+            if (scrollPosition > (documentHeight - windowHeight) * 0.05) {
+                description.classList.add('hidden');
+            } else {
+                description.classList.remove('hidden');
+            }
+        });
+    </script>
+    
 </body>
 </html>
