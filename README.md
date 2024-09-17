@@ -27,6 +27,6 @@ The Preston City Homepage includes:
 - **CSS**: For styling the page and making it responsive.
 - **JavaScript**: For hiding and showing the description box based on scroll position.
 
-## Clone the repository**:
+## Clone the repository:
    ```bash
 https://github.com/RomanIrt/hmtwnsite.git
